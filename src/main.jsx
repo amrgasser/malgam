@@ -5,7 +5,7 @@ import App from './App';
 import './index.css';
 
 // import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import { BrowserRouter } from 'react-router-dom';
+
 // const router = createBrowserRouter([
 //   {
 //     path: '/',
@@ -14,7 +14,7 @@ import { BrowserRouter } from 'react-router-dom';
 // ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <React.StrictMode>
     <App />
-  </BrowserRouter >
+  </React.StrictMode>
 );
