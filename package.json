@@ -1,7 +1,6 @@
 {
   "homepage": "https://amrgasser.github.io/Malgam/",
-  "name": "hoobank",
-  "private": true,
+  "name": "malgam",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
