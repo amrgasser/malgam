@@ -90,7 +90,7 @@ const PickupInfo2 = () => {
                                             label="Pick up"
                                             onOpen={() => handleEdit(1)}
                                             onChange={handlePickup}
-                                            onClose={() => setState({ ...state, step: 1 })}
+                                            onClose={() => setState({ ...state, step: 2 })}
                                             sx={{
                                                 '.css-1d3z3hw-MuiOutlinedInput-notchedOutline': {
                                                     border: 'none'
@@ -131,7 +131,7 @@ const PickupInfo2 = () => {
                                             onChange={handleDropoff}
                                             onOpen={() => handleEdit(3)}
                                             open={state.step === 2}
-                                            onClose={() => setState({ ...state, step: 1 })}
+                                            onClose={() => setState({ ...state, step: 3 })}
                                             sx={{
                                                 '.css-1d3z3hw-MuiOutlinedInput-notchedOutline': {
                                                     border: 'none'
@@ -176,7 +176,7 @@ const PickupInfo2 = () => {
                                         }}
                                         open={state.step == 3}
                                         onOpen={() => setState({ ...state, step: 3 })}
-                                        onClose={() => setState({ ...state, step: 1 })}
+                                        onClose={() => setState({ ...state, step: 4 })}
                                         closeOnSelect
                                         onChange={handlePickupDate}
                                     />
@@ -217,7 +217,7 @@ const PickupInfo2 = () => {
                                             onChange={handlePickupTime}
                                             open={state.step == 4}
                                             onOpen={() => handleEdit(4)}
-                                            onClose={() => setState({ ...state, step: 1 })}
+                                            onClose={() => setState({ ...state, step: 5 })}
 
                                             sx={{
                                                 '.css-1d3z3hw-MuiOutlinedInput-notchedOutline': {
@@ -263,7 +263,7 @@ const PickupInfo2 = () => {
                                         onChange={handleDropoffDate}
                                         open={state.step == 5}
                                         onOpen={() => handleEdit(5)}
-                                        onClose={() => setState({ ...state, step: 1 })}
+                                        onClose={() => setState({ ...state, step: 6 })}
                                     />
                                 </div>
                                 <div className="md:hidden">
