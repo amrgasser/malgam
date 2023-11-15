@@ -148,7 +148,7 @@ const PickupInfo2 = () => {
                 </div>
                 <div className="booking-item-border"></div>
                 {/* <div className="flex w-full bg-white rounded-full" style={{ flex: "1.5 0 0%" }}> */}
-                <div className="flex-1 relative w-full cursor-pointer booking-item pick-up rounded-full">
+                <div className="flex-1 relative  cursor-pointer booking-item pick-up rounded-full">
                     <div className="w-full px-8 py-4 flex items-center">
                         <div>
                             <label htmlfor="grid-state" className="block tracking-wide text-gray-700 text-sm font-bold mb-1 cursor-pointer">Pick-up Date</label>
@@ -230,7 +230,7 @@ const PickupInfo2 = () => {
                     </div>
                 </div>
                 <div className="booking-item-border"></div>
-                <div className="flex-1 relative w-full cursor-pointer booking-item pick-up rounded-full">
+                <div className="flex-1 relative cursor-pointer booking-item pick-up rounded-full">
                     <div className="w-full px-8 py-4 flex items-center">
                         <div>
                             <label htmlfor="grid-state" className="block tracking-wide text-gray-700 text-sm font-bold mb-1 cursor-pointer">Drop-off Date</label>

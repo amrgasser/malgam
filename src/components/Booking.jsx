@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PickupInfo from './Booking/pickUpInfo'
 import styles, { layout } from "../style";
 import Button2 from './Button2';
 // import { useMultistepForm } from '../hooks/useMultistepForm';
