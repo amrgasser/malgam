@@ -1,6 +1,5 @@
 import styles from "./style";
 import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "./components";
-import Booking from "./components/Booking";
 import PickupInfo2 from "./components/Booking/PickupInfo2";
 
 // import { Ro } from 'rea'
@@ -28,8 +27,7 @@ const App = () => (
     <div className={`${styles.paddingX} ${styles.flexCenter}`}>
       <div className={`${styles.boxWidth}`}>
         {/* <PickupInfo /> */}
-        <Booking />
-
+        {/* <Booking /> */}
         <Stats />
         <Business />
         <Billing />
