@@ -92,10 +92,10 @@ const PickupInfo2 = () => {
                                             onChange={handlePickup}
                                             onClose={() => setState({ ...state, step: 2 })}
                                             sx={{
-                                                '.css-1d3z3hw-MuiOutlinedInput-notchedOutline': {
+                                                'fieldset': {
                                                     border: 'none'
                                                 },
-                                                '.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input': {
+                                                'div': {
                                                     padding: 0
                                                 }
                                             }}
@@ -133,14 +133,13 @@ const PickupInfo2 = () => {
                                             open={state.step === 2}
                                             onClose={() => setState({ ...state, step: 3 })}
                                             sx={{
-                                                '.css-1d3z3hw-MuiOutlinedInput-notchedOutline': {
+                                                'fieldset': {
                                                     border: 'none'
                                                 },
-                                                '.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input': {
+                                                'div': {
                                                     padding: 0
                                                 }
                                             }}
-
                                         >
                                             {/* <MenuItem value="">
                                                 None
@@ -167,10 +166,10 @@ const PickupInfo2 = () => {
                                 <div className="sm: hidden md:block">
                                     <DesktopDatePicker
                                         sx={{
-                                            '.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input': {
+                                            'input': {
                                                 padding: '0',
                                             },
-                                            '.css-1d3z3hw-MuiOutlinedInput-notchedOutline': {
+                                            'fieldset': {
                                                 border: 'none'
                                             }
                                         }}
@@ -220,10 +219,10 @@ const PickupInfo2 = () => {
                                             onClose={() => setState({ ...state, step: 5 })}
 
                                             sx={{
-                                                '.css-1d3z3hw-MuiOutlinedInput-notchedOutline': {
+                                                'fieldset': {
                                                     border: 'none'
                                                 },
-                                                '.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input': {
+                                                'div': {
                                                     padding: 0
                                                 }
                                             }}
@@ -304,14 +303,13 @@ const PickupInfo2 = () => {
                                             onClose={() => setState({ ...state, step: 1 })}
                                             open={state.step == 6}
                                             sx={{
-                                                '.css-1d3z3hw-MuiOutlinedInput-notchedOutline': {
+                                                'fieldset': {
                                                     border: 'none'
                                                 },
-                                                '.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input': {
+                                                'div': {
                                                     padding: 0
                                                 }
                                             }}
-
                                         >
                                             {/* <MenuItem value="">
                                                 None
