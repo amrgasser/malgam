@@ -17,7 +17,7 @@ const App = () => (
     {/* <div className={`bg-gray-200 ${styles.flexStart}`}> */}
     <div className={`${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
-        <div className="w-[75%] m-auto">
+        <div className="w-full m-auto">
           <PickupInfo2 />
         </div>
 
