@@ -252,11 +252,11 @@ const PickupInfo2 = () => {
                                 <div className="sm: hidden md:block">
                                     <DesktopDatePicker
                                         sx={{
-                                            '.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input': {
-                                                padding: '0',
-                                            },
-                                            '.css-1d3z3hw-MuiOutlinedInput-notchedOutline': {
+                                            'fieldset': {
                                                 border: 'none'
+                                            },
+                                            'div': {
+                                                padding: 0
                                             }
                                         }}
                                         onChange={handleDropoffDate}
