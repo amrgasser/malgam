@@ -18,6 +18,9 @@ const PickupInfo2 = () => {
     const [state, setState] = useState({
         step: 0
     })
+    const handleEdit = (num) => {
+        setState({ ...state, step: num })
+    }
     const handlePickup = (e) => {
         const loc = e.target.value
         console.log(loc);
@@ -32,14 +35,14 @@ const PickupInfo2 = () => {
         // console.log(loc);
         setState({
             ...state,
-            step: state.step + 1,
+            step: 3,
             dropoffLoc: loc
         })
     }
     const handlePickupDate = (e) => {
         setState({
             ...state,
-            step: state.step + 1,
+            step: 4,
             pickupDate: e
         })
     }
@@ -47,14 +50,14 @@ const PickupInfo2 = () => {
         const time = e.target.value
         setState({
             ...state,
-            step: state.step + 1,
+            step: 5,
             pickupTime: time
         })
     }
     const handleDropoffDate = (e) => {
         setState({
             ...state,
-            step: state.step + 1,
+            step: 6,
             dropoffDate: e
         })
     }
@@ -62,7 +65,7 @@ const PickupInfo2 = () => {
         const time = e.target.value
         setState({
             ...state,
-            step: state.step + 1,
+            step: 7,
             dropoffTime: time
         })
     }
@@ -85,7 +88,9 @@ const PickupInfo2 = () => {
                                             // value={state.pickupLoc}
                                             value={state.pickupLoc}
                                             label="Pick up"
+                                            onOpen={() => handleEdit(1)}
                                             onChange={handlePickup}
+                                            onClose={() => setState({ ...state, step: 1 })}
                                             sx={{
                                                 '.css-1d3z3hw-MuiOutlinedInput-notchedOutline': {
                                                     border: 'none'
@@ -124,7 +129,9 @@ const PickupInfo2 = () => {
                                             value={state.dropoffLoc}
                                             label="Pick up"
                                             onChange={handleDropoff}
+                                            onOpen={() => handleEdit(3)}
                                             open={state.step === 2}
+                                            onClose={() => setState({ ...state, step: 1 })}
                                             sx={{
                                                 '.css-1d3z3hw-MuiOutlinedInput-notchedOutline': {
                                                     border: 'none'
@@ -168,9 +175,10 @@ const PickupInfo2 = () => {
                                             }
                                         }}
                                         open={state.step == 3}
+                                        onOpen={() => setState({ ...state, step: 3 })}
+                                        onClose={() => setState({ ...state, step: 1 })}
+                                        closeOnSelect
                                         onChange={handlePickupDate}
-                                    // defaultValue={dayjs(new Date())}
-                                    // label={"HELLO"}
                                     />
                                 </div>
                                 <div className="md:hidden">
@@ -208,6 +216,9 @@ const PickupInfo2 = () => {
                                             label="Pick up"
                                             onChange={handlePickupTime}
                                             open={state.step == 4}
+                                            onOpen={() => handleEdit(4)}
+                                            onClose={() => setState({ ...state, step: 1 })}
+
                                             sx={{
                                                 '.css-1d3z3hw-MuiOutlinedInput-notchedOutline': {
                                                     border: 'none'
@@ -251,6 +262,8 @@ const PickupInfo2 = () => {
                                         }}
                                         onChange={handleDropoffDate}
                                         open={state.step == 5}
+                                        onOpen={() => handleEdit(5)}
+                                        onClose={() => setState({ ...state, step: 1 })}
                                     />
                                 </div>
                                 <div className="md:hidden">
@@ -287,6 +300,8 @@ const PickupInfo2 = () => {
                                             value={state.dropoffLoc}
                                             label="Pick up"
                                             onChange={handleDropoffTime}
+                                            onOpen={() => handleEdit(6)}
+                                            onClose={() => setState({ ...state, step: 1 })}
                                             open={state.step == 6}
                                             sx={{
                                                 '.css-1d3z3hw-MuiOutlinedInput-notchedOutline': {
