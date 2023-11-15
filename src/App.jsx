@@ -1,7 +1,6 @@
 import styles from "./style";
 import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero } from "./components";
 import Booking from "./components/Booking";
-import PickupInfo from "./components/Booking/pickUpInfo";
 import PickupInfo2 from "./components/Booking/PickupInfo2";
 
 // import { Ro } from 'rea'
