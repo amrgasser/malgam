@@ -255,7 +255,7 @@ const PickupInfo2 = () => {
                                             'fieldset': {
                                                 border: 'none'
                                             },
-                                            'div': {
+                                            'input': {
                                                 padding: 0
                                             }
                                         }}
