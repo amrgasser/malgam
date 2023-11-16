@@ -9,7 +9,7 @@ const DropDown = ({ label, handleEdit, setState, handleChange, state, isLast = f
     return (
         <div className="flex items-center relative location-bg">
             <div className="booking-item cursor-pointer rounded-full w-full">
-                <div className="flex items-center pl-8">
+                <div className={`flex items-center ${isFirst && 'pl-8'}`}>
                     <div>
                         <div className="flex flex-col w-full">
                             <label htmlfor="grid-state" className="block tracking-wide text-gray-700 text-sm font-bold">{label}</label>
