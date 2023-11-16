@@ -3,13 +3,15 @@ import React from 'react'
 import FormControl from '@mui/material/FormControl';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 const locations = ['Liverpool', 'Manchester', 'Yorkshire']
 
 const DropDown = ({ label, handleEdit, setState, handleChange, state, isLast = false, isFirst = false }) => {
+
     return (
-        <div className="flex items-center relative location-bg">
+        <div className="flex items-center relative py-4">
             <div className="booking-item cursor-pointer rounded-full w-full">
-                <div className={`flex items-center ${isFirst && 'pl-8'}`}>
+                <div className={`flex items-center ${isFirst && useWindowDimensions().width >= 1200 && 'pl-8'} ${isLast && useWindowDimensions().width >= 1200 && 'pr-12'}`}>
                     <div>
                         <div className="flex flex-col w-full">
                             <label htmlfor="grid-state" className="block tracking-wide text-gray-700 text-sm font-bold">{label}</label>
@@ -34,6 +36,9 @@ const DropDown = ({ label, handleEdit, setState, handleChange, state, isLast = f
                                             },
                                             'md:MuiSelect-select': {
                                                 padding: 0
+                                            },
+                                            '.MuiSelect-select.MuiSelect-outlined.MuiInputBase-input.MuiOutlinedInput-input.MuiInputBase-inputSizeSmall': {
+                                                padding: 0
                                             }
                                         }}
 
@@ -44,7 +49,7 @@ const DropDown = ({ label, handleEdit, setState, handleChange, state, isLast = f
                             </div>
                         </div>
                     </div>
-                    {!isLast && <div className="booking-item-border"></div>}
+                    {!isLast && useWindowDimensions().width >= 1200 && <div className="booking-item-border"></div>}
                 </div>
             </div>
         </div>
