@@ -18,7 +18,6 @@ const router = createBrowserRouter([
 ], {
   basename: '/malgam'
 });
-const roter2 = createBrowserRouter()
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />
 );
