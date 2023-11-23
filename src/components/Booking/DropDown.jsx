@@ -13,7 +13,7 @@ const DropDown = ({ label, handleEdit, setState, handleChange, state, isLast = f
             <div className="booking-item cursor-pointer rounded-full w-full">
                 <div className={`flex items-center ${isFirst && useWindowDimensions().width >= 1200 && 'pl-8'} ${isLast && useWindowDimensions().width >= 1200 && 'pr-12'}`}>
                     <div>
-                        <div className="flex flex-col w-full">
+                        <div className="flex flex-col w-full text-center lg:text-left">
                             <label htmlfor="grid-state" className="block tracking-wide text-gray-700 text-sm font-bold">{label}</label>
                             <div className="relative">
                                 <FormControl sx={{ m: 1, width: 140, margin: 0 }} size="small">

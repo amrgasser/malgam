@@ -4,21 +4,23 @@ import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 
-const DatePicker = ({ label, setState, handleEdit, state, handleChange }) => {
+const DatePicker = ({ label, setState, handleEdit, state, handleChange, myStep }) => {
     return (
         <div className="flex items-center relative">
-            <div className=" cursor-pointer booking-item rounded-full w-full">
+            <div className=" cursor-pointer booking-item rounded-full">
                 <div className={`flex items-center`}>
                     <div className="">
-                        <div className="flex flex-col w-full">
+                        <div className="flex flex-col">
 
-                            <label htmlfor="grid-state" className="block tracking-wide text-gray-700 text-sm font-bold mb-1 cursor-pointer">{label}</label>
-                            <div className="block appearance-none text-left text-sm w-full leading-tight cursor-pointer">
+                            <label htmlfor="grid-state" className="block tracking-wide text-center text-gray-700 text-sm font-bold mb-1 cursor-pointer">{label}</label>
+                            <div className="block appearance-none text-left text-sm leading-tight cursor-pointer">
                                 {useWindowDimensions().width < 1200 ?
                                     <MobileDatePicker
+                                        className='text-center'
                                         sx={{
                                             'input': {
                                                 padding: '0',
+                                                textAlign: 'center'
                                             },
                                             'fieldset': {
                                                 border: 'none'
@@ -26,8 +28,8 @@ const DatePicker = ({ label, setState, handleEdit, state, handleChange }) => {
                                         }}
                                         onChange={handleChange}
                                         closeOnSelect
-                                        open={state.step == 5}
-                                        onOpen={() => handleEdit(5)}
+                                        open={state.step == myStep}
+                                        onOpen={() => handleEdit(myStep)}
                                         onClose={() => setState({ ...state, step: 6 })}
                                     />
                                     :
@@ -37,12 +39,16 @@ const DatePicker = ({ label, setState, handleEdit, state, handleChange }) => {
                                                 border: 'none'
                                             },
                                             'input': {
-                                                padding: 0
+                                                padding: 0,
+                                                width: '60%',
+                                            },
+                                            '.MuiInputBase-root': {
+                                                justifyContent: 'center'
                                             }
                                         }}
                                         onChange={handleChange}
-                                        open={state.step == 5}
-                                        onOpen={() => handleEdit(5)}
+                                        open={state.step == myStep}
+                                        onOpen={() => handleEdit(myStep)}
                                         onClose={() => setState({ ...state, step: 6 })}
                                     />
                                 }

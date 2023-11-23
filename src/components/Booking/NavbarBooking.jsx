@@ -1,12 +1,9 @@
 import { useState } from "react";
 
 import { close, logo, menu } from "../../assets";
-import { navLinks } from "../../constants";
 import CarRentalIcon from '@mui/icons-material/CarRental';
-import PersonIcon from '@mui/icons-material/Person';
 import PaymentIcon from '@mui/icons-material/Payment';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import { blueGrey } from "@mui/material/colors";
 
 const sx = {
   height: '3rem',

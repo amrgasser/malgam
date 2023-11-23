@@ -68,11 +68,10 @@ const PickupInfo2 = () => {
             <div className="w-[80%] py-6 m-auto bg-white grid grid-cols-2 gap-5 justify-between place-items-center lg:gap-0  lg:py-0 lg:px-0 lg:w-full lg:flex lg:flex-row lg:items-center lg:rounded-full relative booking-item-nav-search" >
                 <DropDown state={state} handleChange={handlePickup} label={'Pickup Location'} handleEdit={handleEdit} setState={setState} isFirst={true} />
                 <DropDown state={state} handleChange={handleDropoff} label={'Dropoff Location'} handleEdit={handleEdit} setState={setState} />
-                <DatePicker state={state} setState={setState} handleChange={handlePickupDate} handleEdit={handleEdit} label={'Pickup Date'} />
-
+                <DatePicker state={state} setState={setState} handleChange={handlePickupDate} handleEdit={handleEdit} label={'Pickup Date'} myStep={3} />
                 <DropDown state={state} handleChange={handlePickupTime} label={'Pickup Time'} handleEdit={handleEdit} setState={setState} />
-                <DatePicker state={state} setState={setState} handleChange={handleDropoffDate} handleEdit={handleEdit} label={'Dropoff Date'} />
-                <DropDown state={state} handleChange={handleDropoffTime} label={'Dropoff Location'} handleEdit={handleEdit} setState={setState} isLast={true} />
+                <DatePicker state={state} setState={setState} handleChange={handleDropoffDate} handleEdit={handleEdit} label={'Dropoff Date'} myStep={5} />
+                <DropDown state={state} handleChange={handleDropoffTime} label={'Dropoff Time'} handleEdit={handleEdit} setState={setState} isLast={true} />
 
                 <SearchButton />
             </div>
