@@ -15,8 +15,10 @@ const router = createBrowserRouter([
     path: '/booking',
     element: <ShowCars />
   },
-]);
-
+], {
+  basename: '/malgam'
+});
+const roter2 = createBrowserRouter()
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />
 );
